@@ -7,7 +7,8 @@
     "build": "bunx --bun vite build",
     "preview": "bunx --bun vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch"
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
+    "migrate" : "bunx drizzle-kit generate && bunx tsx ./src/lib/server/db/migrate.ts"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.0.0",

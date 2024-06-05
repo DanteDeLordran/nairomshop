@@ -2,14 +2,14 @@ version: '3'
 
 services:
   db:
-    container_name: sveltekit_db
+    container_name: nairomshop_db
     image: postgres:15.1
     volumes:
       - pgdata:/var/lib/postgresql/data
     environment:
       - POSTGRES_USER=lordran_dev
       - POSTGRES_PASSWORD=lordran_dev
-      - POSTGRES_DB=sveltekit_db
+      - POSTGRES_DB=nairomshop_db
     ports:
       - "5432:5432"
 
