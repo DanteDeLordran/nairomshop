@@ -5,7 +5,7 @@
 </script>
 
 <div class="w-full p-8">
-    <h2 class="text-2xl font-semibold text-gray-700 text-center">Welcome!</h2>
+    <h2 class="text-2xl font-semibold text-gray-700 text-center">Join us !</h2>
 
     <div class="mt-4 flex items-center justify-between">
         <span class="border-b w-full"></span>
