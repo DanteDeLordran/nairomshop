@@ -8,7 +8,7 @@
     "preview": "bunx --bun vite preview",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-    "migrate" : "bunx drizzle-kit generate && bunx tsx ./src/lib/server/db/migrate.ts"
+    "migrate": "bunx drizzle-kit generate && bunx tsx ./src/lib/server/db/migrate.ts"
   },
   "devDependencies": {
     "@sveltejs/adapter-auto": "^3.0.0",
@@ -26,6 +26,7 @@
   },
   "type": "module",
   "dependencies": {
+    "@auth/sveltekit": "^1.2.0",
     "drizzle-orm": "^0.31.1",
     "postgres": "^3.4.4"
   }
