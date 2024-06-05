@@ -1,3 +1,3 @@
 
-<h1>Whats up SvelteKit !!</h1>
+<h1>Wellcome to NairomShop !!</h1>
 
