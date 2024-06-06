@@ -1,3 +1,8 @@
+<script lang="ts">
+  import type { PageData } from "./$types";
+
+  export let data: PageData;
+</script>
 
     <main class="my-8">
         <div class="container mx-auto px-6">

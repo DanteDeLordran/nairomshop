@@ -8,6 +8,13 @@
       "when": 1717575514008,
       "tag": "0000_whole_veda",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "7",
+      "when": 1717637370028,
+      "tag": "0001_lumpy_puck",
+      "breakpoints": true
     }
   ]
 }
