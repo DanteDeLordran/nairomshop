@@ -24,7 +24,7 @@
                 </h3>
                 <div class="flex items-center justify-between">
                     <span class="text-3xl font-bold  text-gray-900 dark:text-white">${product.price}</span>
-                    <button on:click={()=>addToCart(product)} class="text-white bg-[#FF4F01] hover:bg-[#FF4F01] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#FF4F01] dark:hover:bg-[#ff0101e7] dark:focus:ring-blue-800"
+                    <button on:click={()=>addToCart(product , data.user?.id || 1)} class="text-white bg-[#FF4F01] hover:bg-[#FF4F01] focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-[#FF4F01] dark:hover:bg-[#ff0101e7] dark:focus:ring-blue-800"
                      >Add to cart</button>
                 </div>
             </div>

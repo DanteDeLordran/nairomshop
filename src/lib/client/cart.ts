@@ -15,7 +15,7 @@ type Product = {
     categoryId?: number | null | undefined;
 }
 
-export const addToCart = (product : Product) => {
+export const addToCart = (product : Product, userId : number) => {
     if (!browser) return;
     const orders = localStorage.getItem('orders');
 
@@ -27,7 +27,7 @@ export const addToCart = (product : Product) => {
             items[itemIndex].totalPrice = String(items[itemIndex].quantity * Number(product.price))
         }else{
             const order : Order = {
-                userId: 1,
+                userId: userId,
                 quantity: 1,
                 totalPrice: product.price,
                 productId: product.id

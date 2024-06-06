@@ -1,6 +1,9 @@
 <script lang="ts">
     import { isCartEmpty } from '$lib/client/cart';
     import '../app.css'
+    import type { LayoutData } from './$types';
+
+    export let data : LayoutData
 
     $: isEmpty = isCartEmpty()
 </script>
@@ -36,9 +39,17 @@
             </a>
             
             <ul class="hidden md:flex px-4 mx-auto font-semibold font-heading space-x-12">
-                <li><a class="hover:text-gray-200" href="/auth/login">Login</a></li>
-                <li><a class="hover:text-gray-200" href="/auth/register">Register</a></li>
-              </ul>
+              {#if !data.user}
+                  <li><a class="hover:text-gray-200" href="/auth/login">Login</a></li>
+                  <li><a class="hover:text-gray-200" href="/auth/register">Register</a></li>
+              {:else}
+                  <li>
+                      <form method="POST" action="/?/logout">
+                          <button type="submit" class="hover:text-gray-200">Logout</button>
+                      </form>
+                  </li>
+              {/if}
+          </ul>
             
           </div>
         </div>
