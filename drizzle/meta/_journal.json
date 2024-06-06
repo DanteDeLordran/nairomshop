@@ -22,6 +22,13 @@
       "when": 1717651498744,
       "tag": "0002_furry_pride",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1717657570751,
+      "tag": "0003_brainy_giant_man",
+      "breakpoints": true
     }
   ]
 }
