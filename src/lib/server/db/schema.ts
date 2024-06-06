@@ -1,4 +1,4 @@
-import { boolean, integer, pgTable, serial, text, timestamp } from "drizzle-orm/pg-core";
+import { boolean, decimal, integer, pgTable, serial, text, timestamp, varchar } from "drizzle-orm/pg-core";
 
 export const user = pgTable('users', {
 	id: serial('id').primaryKey(),
@@ -21,8 +21,28 @@ export const session = pgTable('sessions', {
 	}).notNull()
 });
 
-export const product = pgTable('products' , {
-	id : serial('id').primaryKey(),
-	name: text('name').notNull(),
-	desc : text('desc').notNull()
-})
+export const category = pgTable('categories', {
+	id: serial('id').primaryKey(),
+	name: varchar('name', { 
+		length: 256 
+	}).notNull().unique(),
+});
+
+export const product = pgTable('products', {
+	id: serial('id').primaryKey(),
+	name: varchar('name', { 
+		length: 256 
+	}).notNull().unique(),
+	description: varchar('description', { 
+		length: 512 
+	}).notNull(),
+	price: decimal('price').notNull(),
+	categoryId: integer('category_id').references(() => category.id),
+});
+
+export const order = pgTable('orders', {
+	id: serial('id').primaryKey(),
+	productId: integer('product_id').references(() => product.id),
+	quantity: integer('quantity').notNull(),
+	totalPrice: decimal('total_price').notNull()
+});
