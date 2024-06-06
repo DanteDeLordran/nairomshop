@@ -5,7 +5,7 @@
         <div class="max-w-lg px-4 sm:pt-24 pt-12 sm:pb-8 mx-auto text-left md:max-w-none md:text-center">
           <div class='text-center py-4 hidden sm:block'>
   
-          <h1 class="font-extrabold leading-10 tracking-tight text-gray-800 text-center sm:leading-none text-5xl sm:text-9xl">
+          <h1 class="font-extrabold leading-10 tracking-tight text-gray-800 text-center sm:leading-none text-5xl sm:text-6xl xl:text-8xl">
             <span class="inline md:block">THE BEST CHOICE </span>
             <span
               class="relative mt-2 bg-clip-text text-gray-800 md:inline-block"
