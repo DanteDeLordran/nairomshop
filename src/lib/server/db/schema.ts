@@ -44,5 +44,6 @@ export const order = pgTable('orders', {
 	id: serial('id').primaryKey(),
 	productId: integer('product_id').references(() => product.id),
 	quantity: integer('quantity').notNull(),
-	totalPrice: decimal('total_price').notNull()
+	totalPrice: decimal('total_price').notNull(),
+	userId : integer('user_id').references(()=> user.id)
 });
