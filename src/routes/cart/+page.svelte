@@ -2,19 +2,19 @@
     import { clearCart, getCart, removeFromCart } from '$lib/client/cart';
 
     $: orders = getCart()
-
+    let submissionStatus = '';
     const handleRemoveFromCart = (i : number) =>{
         removeFromCart(i)
         orders = getCart()
     }
 
     async function handleSubmit(event: { currentTarget: EventTarget & HTMLFormElement }) {
-        console.log(event.currentTarget.action)
 		const response = await fetch(event.currentTarget.action, {
 			method: 'POST',
 			body: JSON.stringify(orders)
 		});
         if (response.ok) {
+            submissionStatus = 'Order submited'
             clearCart()
             orders = getCart()
         }
@@ -31,6 +31,13 @@
         </button>
     </form>
 </div>
+
+{#if submissionStatus.length > 0}
+    <div class="flex justify-center mt-4">
+        <p class="text-gray-800">{submissionStatus}</p>
+    </div>
+{/if}
+
 <div class="flex flex-wrap justify-center">
     {#each orders as order , i}
     <div class="bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700 m-5">

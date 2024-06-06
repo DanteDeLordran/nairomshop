@@ -16,7 +16,7 @@ export const load : PageServerLoad = async({cookies}) => {
     } else {
         return {
             user: null,
-            products : []
+            products
         };
     }
 }
